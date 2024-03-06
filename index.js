@@ -7,11 +7,11 @@ import { getDocument, updateDocument } from './controller/document-controller.js
 const PORT = process.env.PORT || 9000;
 
 Connection();
-const BASEPATH = process.env.BASEPATH
+
 
 const io = new Server(PORT, {
     cors: {
-        origin: BASEPATH, // Corrected the URL format
+        origin: '*', // Corrected the URL format
         methods: ['GET', 'POST']
     }
 });
